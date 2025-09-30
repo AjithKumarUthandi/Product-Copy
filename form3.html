@@ -3,7 +3,17 @@
     <title>Product overview Webinar | Freshmarketer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style type="text/css">
-      *{ margin: 0; padding: 0 } body{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; color: #12344d; } .fw-section{ display: flex; height: 100%; width: 100%; background-color: rgba(238,90,36,.1); } .fw-col{ flex: 1 0; padding: 40px; } .--content{ background-color: #fff; } .fw-webniar-form{ max-width: 55%; background-color: #fff; padding: 25px; border-radius: 2px; box-shadow: 0 0 40px #e4e4e4; margin: auto; transition: ease-in 0.4s } .--center-align{ align-self: center; } .fw-input{ width: 100%; border-radius: 2px; border: 1px solid #e8e8e8; min-height: 32px; padding: 10px; outline: none; font-size: 14px; } .fw-form-group{ margin-top: 18px; } .fw-form-group .fw-input{ margin-top: 5px; } .fw-mb30{ margin-bottom: 30px; } .fw-mt50{ margin-top: 120px; } .fw-pri-btn{ min-width: 140px; display: inline-block; padding: 10px; background-color: #ee5a24; color: #fff; font-size: 14px; margin-top: 25px; border-radius: 3px; border: none; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer } .fw-cn-max-align{ max-width: 75%; } h2{ font-size: 28px; font-weight: 500; } p { letter-spacing: 0.5px; line-height: 22px; color: #666; } .fw-h4{ font-size: 20px; font-weight: 500; } .--link-text{ color: #0075bb; font-weight: 500; } .fw-list-points{ margin-top: 30px; margin-left: 30px; } .fw-list-points li{ margin-top: 12px; line-height: 22px; color: #666 } ::placeholder { color: #b1b3b2; opacity: 0.6; } :-ms-input-placeholder { color: #b1b3b2; opacity: 0.6; } ::-ms-input-placeholder { color: #b1b3b2; opacity: 0.6; } .fw-ml20{ margin-left: 20px } .fw-mb50{ margin-bottom: 80px; } .require-symbol{ font-size: 12px; margin-left: 4px; color: red; } .form-success{ text-align: center; display: none; transition: ease-in 0.4s } .toogle-success .form-success{ display: block; transition: ease-in 0.4s } .toogle-success .fw-webniar-form{ display: none; transition: ease-in 0.4s } @media screen and (max-width: 992px) { .fw-cn-max-align{ max-width: 100%; } .fw-section{ flex-direction: column; background-color: inherit; } .fw-webniar-form{ max-width: 100%; } .--center-align{ align-self: inherit; background-color: rgba(238,90,36,.1); } }
+      *{ margin: 0; padding: 0 } body{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; color: #12344d; } .fw-section{ display: flex; height: 100%; width: 100%; background-color: rgba(238,90,36,.1); } .fw-col{ flex: 1 0; padding: 40px; } .--content{ background-color: #fff; } .fw-webniar-form{ max-width: 55%; background-color: #fff; padding: 25px; border-radius: 2px; box-shadow: 0 0 40px #e4e4e4; margin: auto; transition: ease-in 0.4s } .--center-align{ align-self: center; } .fw-input{ width: 100%; border-radius: 2px; border: 1px solid #e8e8e8; min-height: 32px; padding: 10px; outline: none; font-size: 14px; } .fw-form-group{ margin-top: 18px; } .fw-form-group .fw-input{ margin-top: 5px; } .fw-mb30{ margin-bottom: 30px; } .fw-mt50{ margin-top: 120px; } .fw-pri-btn{ min-width: 140px; display: inline-block; padding: 10px; background-color: #ee5a24; color: #fff; font-size: 14px; margin-top: 25px; border-radius: 3px; border: none; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer } .fw-cn-max-align{ max-width: 75%; } h2{ font-size: 28px; font-weight: 500; } p { letter-spacing: 0.5px; line-height: 22px; color: #666; } .fw-h4{ font-size: 20px; font-weight: 500; } .--link-text{ color: #0075bb; font-weight: 500; } .fw-list-points{ margin-top: 30px; margin-left: 30px; } .fw-list-points li{ margin-top: 12px; line-height: 22px; color: #666 } ::placeholder { color: #b1b3b2; opacity: 0.6; } :-ms-input-placeholder { color: #b1b3b2; opacity: 0.6; } ::-ms-input-placeholder { color: #b1b3b2; opacity: 0.6; } .fw-ml20{ margin-left: 20px } .fw-mb50{ margin-bottom: 80px; } .require-symbol{ font-size: 12px; margin-left: 4px; color: red; } .form-success{ text-align: center; display: none; transition: ease-in 0.4s } .toogle-success .form-success{ display: block; transition: ease-in 0.4s } .toogle-success .fw-webniar-form{ display: none; transition: ease-in 0.4s } 
+      
+      /* API Result Styles */
+      .api-result{ background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 4px; padding: 15px; margin: 20px 0; } 
+      .api-result.success{ border-color: #28a745; background: #d4edda; color: #155724; } 
+      .api-result.error{ border-color: #dc3545; background: #f8d7da; color: #721c24; } 
+      .api-result.loading{ border-color: #007bff; background: #d1ecf1; color: #0c5460; }
+      .api-result pre{ background: #fff; padding: 10px; border-radius: 3px; overflow-x: auto; font-size: 12px; }
+      .api-result h3{ margin-bottom: 10px; font-size: 18px; }
+      
+      @media screen and (max-width: 992px) { .fw-cn-max-align{ max-width: 100%; } .fw-section{ flex-direction: column; background-color: inherit; } .fw-webniar-form{ max-width: 100%; } .--center-align{ align-self: inherit; background-color: rgba(238,90,36,.1); } }
     </style>
 
     <script
@@ -12,29 +22,69 @@ chat='true'>
 </script>
 
    <script>
-        // ✅ Corrected code - properly wrapped in script tags
-        fetch('https://app.freshmarketer.com/ab/api/org/default/project/default/code/cdndomain')
-        .then(response => response.json())
-        .then(data => {
-            console.log('CDN Domain:', data);
-            // Display the result on the page
-            document.getElementById('result').innerHTML = `
-                <h2>✅ Success!</h2>
-                <p><strong>CDN Domain:</strong> ${data}</p>
-                <pre>${JSON.stringify(data, null, 2)}</pre>
-            `;
-        })
-        .catch(error => {
-            console.error('API Error:', error);
-            // Display the error on the page
-            document.getElementById('result').innerHTML = `
-                <h2>❌ Error</h2>
-                <p><strong>Error:</strong> ${error.message}</p>
-                <p>Check the browser console for more details.</p>
-            `;
+        // ✅ Corrected API call with proper DOM loading and error handling
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🔄 Starting CDN Domain API call...');
+            
+            // Show loading state
+            const resultDiv = document.getElementById('result');
+            if (resultDiv) {
+                resultDiv.className = 'api-result loading';
+                resultDiv.innerHTML = `
+                    <h3>🔄 Loading CDN Domain...</h3>
+                    <p>Making API call to fetch CDN domain information...</p>
+                `;
+            }
+            
+            fetch('https://app.freshmarketer.com/ab/api/org/default/project/default/code/cdndomain')
+            .then(response => {
+                console.log('Response status:', response.status);
+                console.log('Response headers:', response.headers);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                // Try to get response as text first, then parse as JSON if possible
+                return response.text().then(text => {
+                    try {
+                        return JSON.parse(text);
+                    } catch (e) {
+                        // If it's not JSON, return as text
+                        return text;
+                    }
+                });
+            })
+            .then(data => {
+                console.log('✅ CDN Domain received:', data);
+                
+                if (resultDiv) {
+                    resultDiv.className = 'api-result success';
+                    resultDiv.innerHTML = `
+                        <h3>✅ API Call Successful!</h3>
+                        <p><strong>CDN Domain:</strong> ${data}</p>
+                        <pre>${typeof data === 'object' ? JSON.stringify(data, null, 2) : data}</pre>
+                    `;
+                }
+            })
+            .catch(error => {
+                console.error('❌ API Error:', error);
+                
+                if (resultDiv) {
+                    resultDiv.className = 'api-result error';
+                    resultDiv.innerHTML = `
+                        <h3>❌ API Call Failed</h3>
+                        <p><strong>Error:</strong> ${error.message}</p>
+                        <p>Check the browser console for more details.</p>
+                        ${error.message.includes('CORS') ? 
+                          '<p><em>This appears to be a CORS issue. Make sure the Chrome extension is loaded and active.</em></p>' : 
+                          ''}
+                    `;
+                }
+            });
         });
     </script>
-<!--   <script type="text/javascript">
+  <script type="text/javascript">
     function submitForm(){
       var aa = document.getElementById("form-section"),
       form = document.getElementById("webinar-form"),
@@ -58,7 +108,7 @@ window.FMApi = window.FMApi || []; window.FMApi.push("fm_form_tracking", "FBC51D
       }, 3000);
     }
     
-  </script> -->
+  </script>
     </head>
   <body>
     <section class="fw-section">
@@ -71,9 +121,15 @@ window.FMApi = window.FMApi || []; window.FMApi.push("fm_form_tracking", "FBC51D
           <ul class="fw-list-points">
             <li>Understand how visitors interact with your website with dynamic heatmaps</li>
             <li>Find out where exactly your visitors drop off in their journey using funnel analysis</li>
-            <li>Easily run A/B testing experiments with Freshmarketer’s Chrome extension</li>
+            <li>Easily run A/B testing experiments with Freshmarketer's Chrome extension</li>
             <li>Know about all the features of freshmarketer and its benefits</li>
           </ul>
+          
+          <!-- ✅ Added result div for API response -->
+          <div id="result" class="api-result loading">
+            <h3>🔄 Initializing...</h3>
+            <p>Preparing to fetch CDN domain information...</p>
+          </div>
         </div>
       </div>
       <div class="fw-col --form-col --center-align" id="form-section">
