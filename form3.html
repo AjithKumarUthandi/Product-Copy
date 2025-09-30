@@ -10,6 +10,30 @@
 src='//fm-staging-us-app-cdnjs.s3.amazonaws.com/crm/9898988/7818871.js'
 chat='true'>
 </script>
+
+   <script>
+        // ✅ Corrected code - properly wrapped in script tags
+        fetch('https://app.freshmarketer.com/ab/api/org/default/project/default/code/cdndomain')
+        .then(response => response.json())
+        .then(data => {
+            console.log('CDN Domain:', data);
+            // Display the result on the page
+            document.getElementById('result').innerHTML = `
+                <h2>✅ Success!</h2>
+                <p><strong>CDN Domain:</strong> ${data}</p>
+                <pre>${JSON.stringify(data, null, 2)}</pre>
+            `;
+        })
+        .catch(error => {
+            console.error('API Error:', error);
+            // Display the error on the page
+            document.getElementById('result').innerHTML = `
+                <h2>❌ Error</h2>
+                <p><strong>Error:</strong> ${error.message}</p>
+                <p>Check the browser console for more details.</p>
+            `;
+        });
+    </script>
 <!--   <script type="text/javascript">
     function submitForm(){
       var aa = document.getElementById("form-section"),
